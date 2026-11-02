@@ -3,11 +3,23 @@
 [![PaverBlocx ERP](https://img.shields.io/badge/PaverBlocx-ERP%20Especialista-orange.svg)](https://paverblocx.com.br)
 [![Norma ABNT](https://img.shields.io/badge/ABNT-NBR%206136%20%7C%20NBR%209781-blue.svg)](https://paverblocx.com.br/guias)
 [![Zenodo DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23839539-green.svg)](https://doi.org/10.5281/zenodo.23839539)
+[![Calculadora Web](https://img.shields.io/badge/Calculadora%20Web-Online%20Gratuita-brightgreen.svg)](https://paverblocx.com.br/calculadora-traco-bloco-paver)
+[![Manual Técnico PDF](https://img.shields.io/badge/Manual%20T%C3%A9cnico-Download%20PDF-red.svg)](https://paverblocx.com.br/manual-traco-bloco-paver-nbr6136.pdf)
+
 
 Repositório técnico oficial com modelo matemático, scripts em Python e tabelas de referência para cálculo dinâmico de traço, compensação de umidade de agregados e apuração de custo real unitário em indústrias de blocos de concreto, pisos intertravados (paver), tubos e pré-moldados.
 
 ---
 
+
+## 🌐 Ferramenta Interativa Online (Sem Instalação)
+
+Acesse a versão interativa web da calculadora com simulação em tempo real, ajuste de umidade e exportação de fichas técnicas em CSV:
+👉 **[Calculadora de Traço e Custo por Peça - PaverBlocx Online](https://paverblocx.com.br/calculadora-traco-bloco-paver)**
+
+📄 **[Download do Manual Técnico de Traço e Dosagem NBR 6136 / NBR 9781 em PDF](https://paverblocx.com.br/manual-traco-bloco-paver-nbr6136.pdf)**
+
+---
 ## 🎯 Por que a Maioria das Fábricas Erra no Custo?
 
 Na maioria das indústrias de artefatos de cimento, o custo é calculado pela divisão simples do valor dos agregados pelo número teórico de batidas da prensa. Essa conta desconsidera:
