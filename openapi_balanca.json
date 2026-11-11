@@ -1,0 +1,66 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PaverBlocx ERP - API de Automação de Balança e Dosagem Industrial",
+    "description": "Especificação técnica oficial para integração de células de carga, balanças gravimétricas e centrais dosadoras com o PaverBlocx ERP em fábricas de blocos e pavers.",
+    "version": "1.2.0",
+    "contact": {
+      "name": "PaverBlocx ERP Engenharia",
+      "url": "https://paverblocx.com.br",
+      "email": "contato@paverblocx.com.br"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://app.paverblocx.com.br/api/v1/balanca",
+      "description": "Servidor de Produção Industrial"
+    }
+  ],
+  "paths": {
+    "/batelada/compensar": {
+      "post": {
+        "summary": "Calcula compensação gravimétrica de umidade e envia comandos para balança",
+        "description": "Recebe os dados do traço meta e a leitura da sonda de umidade para ajustar o peso da areia e o corte de água da batelada conforme NBR 6136.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id_batelada": { "type": "string", "example": "BAT-2026-1111-001" },
+                  "receita_traco": { "type": "string", "example": "Bloco 14x19x39 Classe A" },
+                  "cimento_meta_kg": { "type": "number", "example": 50.0 },
+                  "areia_meta_kg": { "type": "number", "example": 180.0 },
+                  "pedrisco_meta_kg": { "type": "number", "example": 120.0 },
+                  "agua_meta_litros": { "type": "number", "example": 32.0 },
+                  "umidade_areia_percentual": { "type": "number", "example": 5.5 }
+                },
+                "required": ["id_batelada", "cimento_meta_kg", "areia_meta_kg", "agua_meta_litros", "umidade_areia_percentual"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Compensação calculada com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "cimento_pesado_kg": { "type": "number" },
+                    "areia_seca_equivalente_kg": { "type": "number" },
+                    "agua_corrigida_litros": { "type": "number" },
+                    "desvio_cimento_percentual": { "type": "number" },
+                    "status_conformidade": { "type": "string", "example": "CONFORME_NBR6136" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

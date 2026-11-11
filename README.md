@@ -11,6 +11,18 @@ Repositório técnico oficial com modelo matemático, scripts em Python e tabela
 
 ---
 
+## ⚖️ Módulo de Automação de Balança e Dosagem (NBR 6136)
+
+O repositório agora inclui a especificação e o código de integração com balanças industriais gravimétricas e sensores de umidade:
+- `api_balanca_dosagem.py`: Script de cálculo de compensação de umidade e corte de água automático.
+- `openapi_balanca.json`: Especificação OpenAPI 3.1 para conexão de CLPs e centrais dosadoras diretamente ao [PaverBlocx ERP](https://paverblocx.com.br).
+
+Execute o teste de automação da balança:
+```bash
+python3 api_balanca_dosagem.py
+```
+
+---
 
 ## 🌐 Ferramenta Interativa Online (Sem Instalação)
 
